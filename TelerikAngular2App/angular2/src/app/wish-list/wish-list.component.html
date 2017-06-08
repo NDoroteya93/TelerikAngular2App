@@ -1,0 +1,24 @@
+<div id='divWishList'>
+    <div class='wish-header'>
+        <h3>{{PageTitle}}</h3>
+    </div>
+    <div class='wish-container table-responsive'>
+        <table class='table'>
+            <thead>
+                <th>Wish Name</th>
+                <th>Description</th>
+                <th>Created On</th>
+            </thead>
+            <tbody>
+                <tr *ngIf='wishedPlace === undefined || wishedPlace.length == 0'>
+                    <td colspan="3">No desire destinations</td>
+                </tr>
+                <tr *ngFor='let place of wishedPlace; let i= index'>
+                    <td>{{place.label}}</td>
+                    <td>{{place.description}}</td>
+                    <td>{{place.createdOn | date:"dd/MM/yyyy"}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

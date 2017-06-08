@@ -1,0 +1,14 @@
+<div id="dvChart">
+    <div class="chart-header">
+        <h3>{{pageTitle | uppercase}}</h3>
+    </div>
+    <div class="chart-container">
+        <!--<button (click)="getPlacesForMonth()">Update</button>-->
+
+        <div>
+            <div class='canvas-container'>
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

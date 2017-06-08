@@ -1,0 +1,11 @@
+.navbar.navbar-inverse.navbar-fixed-top {
+    width: 85%;
+    right: 0;
+    left: auto;
+}
+
+@media (max-width: 767px) {
+    .navbar.navbar-inverse.navbar-fixed-top {
+        width: 70%;
+    }
+}

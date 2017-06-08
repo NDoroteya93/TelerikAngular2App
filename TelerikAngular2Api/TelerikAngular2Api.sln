@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Api", "TelerikAngular2.Api\TelerikAngular2.Api.csproj", "{C0EE6DAF-A57A-44AE-BD9B-89D4513B0268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.IdSrv", "TelerikAngular2.IdSrv\TelerikAngular2.IdSrv.csproj", "{578EB457-DBC8-4FF9-953A-E26FE0E2AC83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{512E8EF5-D561-42EF-992C-8D6197FF5372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Data.Common", "Data\TelerikAngular2.Data.Common\TelerikAngular2.Data.Common.csproj", "{F52B2A24-1590-4168-8211-09F735255392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Data", "Data\TelerikAngular2.Data\TelerikAngular2.Data.csproj", "{807CB33A-E0B9-4ED1-8F10-29736C5E8057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Data.Models", "Data\TelerikAngular2.Data.Models\TelerikAngular2.Data.Models.csproj", "{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0DC79C6F-1BF7-406E-9CDA-1C7C4DB010E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Constants", "TelerikAngular2.Constants\TelerikAngular2.Constants.csproj", "{C21ECB92-3681-4AF3-9DF7-558BEBFB771F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAngular2.Core", "TelerikAngular2.Core\TelerikAngular2.Core.csproj", "{582603AA-0E74-460C-8178-9165C599E124}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1D5B7DDC-6047-46A8-8FE3-4415A5D8E16C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0EE6DAF-A57A-44AE-BD9B-89D4513B0268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0EE6DAF-A57A-44AE-BD9B-89D4513B0268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0EE6DAF-A57A-44AE-BD9B-89D4513B0268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0EE6DAF-A57A-44AE-BD9B-89D4513B0268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578EB457-DBC8-4FF9-953A-E26FE0E2AC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578EB457-DBC8-4FF9-953A-E26FE0E2AC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578EB457-DBC8-4FF9-953A-E26FE0E2AC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578EB457-DBC8-4FF9-953A-E26FE0E2AC83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52B2A24-1590-4168-8211-09F735255392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52B2A24-1590-4168-8211-09F735255392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52B2A24-1590-4168-8211-09F735255392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52B2A24-1590-4168-8211-09F735255392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807CB33A-E0B9-4ED1-8F10-29736C5E8057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807CB33A-E0B9-4ED1-8F10-29736C5E8057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807CB33A-E0B9-4ED1-8F10-29736C5E8057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807CB33A-E0B9-4ED1-8F10-29736C5E8057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C21ECB92-3681-4AF3-9DF7-558BEBFB771F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21ECB92-3681-4AF3-9DF7-558BEBFB771F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21ECB92-3681-4AF3-9DF7-558BEBFB771F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21ECB92-3681-4AF3-9DF7-558BEBFB771F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582603AA-0E74-460C-8178-9165C599E124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582603AA-0E74-460C-8178-9165C599E124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582603AA-0E74-460C-8178-9165C599E124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582603AA-0E74-460C-8178-9165C599E124}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F52B2A24-1590-4168-8211-09F735255392} = {512E8EF5-D561-42EF-992C-8D6197FF5372}
+		{807CB33A-E0B9-4ED1-8F10-29736C5E8057} = {512E8EF5-D561-42EF-992C-8D6197FF5372}
+		{9CF87C39-7F33-4EAE-9ACB-3C37D12BB347} = {512E8EF5-D561-42EF-992C-8D6197FF5372}
+		{C21ECB92-3681-4AF3-9DF7-558BEBFB771F} = {0DC79C6F-1BF7-406E-9CDA-1C7C4DB010E7}
+		{582603AA-0E74-460C-8178-9165C599E124} = {1D5B7DDC-6047-46A8-8FE3-4415A5D8E16C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+.imgPoster{
+            height:280px;   
+            width:180px;
+            float:left;
+            cursor:pointer;
+            }
+            a{
+                    font-size: 20pt;
+                 padding-bottom: 5px;
+                  color: #2802ec;
+                  text-decoration: none;
+            }
+            h1{
+                text-align:center;
+            }
+            ul{
+                list-style:none;
+                clear:both;
+            }
+            .listHeader li {
+                display:inline-block;
+            }
+            .search-results{
+                width:70%;
+                margin:0 auto;
+            }
+            .listContent li {
+                clear:both;
+            }
+            .dvDescription{
+                float:left;
+                width:60%;
+                padding:40px;
+            }
+            .mvContent{
+                width:200px;
+            }
+            .mvTitle{
+                display:block;
+            }
+            .mvlist{
+                padding-top:15px;
+                clear:both;
+            }

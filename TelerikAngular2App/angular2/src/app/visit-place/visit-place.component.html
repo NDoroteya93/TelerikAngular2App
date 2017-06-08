@@ -1,0 +1,26 @@
+<div id="dvVisitedPlace">
+    <div class="place-header">
+        <h3>{{PageTitle}}</h3>
+    </div>
+    <div class="place-container table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name of places</th>
+                    <th>Description</th>
+                    <th>Visited On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf='visitedPlace === undefined || visitedPlace.length == 0'>
+                    <td colspan="3">No visited destinations</td>
+                </tr>
+                <tr *ngFor="let place of visitedPlace; let i= index">
+                    <td>{{place.label}}</td>
+                    <td> {{place.description}}</td>
+                    <td class="data-col">{{place.createdOn | date:"dd/MM/yyyy"}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

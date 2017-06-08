@@ -1,0 +1,65 @@
+#divWishList {
+    overflow: hidden;
+    width: 80%;
+    margin-left: 15%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 7px;
+    position: relative;
+    margin-bottom: 24px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+#divWishList .wish-header {
+    color: #ffffff;
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 22px;
+    padding: 4px 22px;
+    background-color: transparent;
+}
+
+#divWishList .wish-header h3 {
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 0.9;
+    color: #ffffff;
+    text-align: left;
+}
+
+#divWishList .wish-container {
+    padding: 10px;
+}
+
+#divWishList .wish-container table {
+    color: #ffffff;
+    opacity: 0.9;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+}
+
+#divWishList .wish-container table td,
+#divWishList .wish-container table th {
+    font-size: 1em;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e9ebec;
+}
+
+#dvVisitedPlace .wish-container table td:first-child,
+#dvVisitedPlace .wish-container table th:first-child {
+    width: 20%;
+}
+
+#dvVisitedPlace .wish-container table td:hover {
+    background: rgba(0, 0, 0, 0.03)
+}

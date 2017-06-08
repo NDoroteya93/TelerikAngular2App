@@ -1,0 +1,12 @@
+<div class="movieList"><a [routerLink]="['/']">Back to list </a>
+  <div *ngIf="movie">
+    <img class="imgPoster" [src]="movie?.urlPoster" />
+    <div class="dvDescription">
+      <a class="mvTitle">{{movie?.title}}</a>
+      <span class="mvContent">{{ movie?.plot }}</span>
+      <p>Year: {{ movie?.year }}</p>
+      <p>Rating: {{ movie?.rating }}</p>
+    </div>
+  </div>
+</div>
+<loading-screen [(objectToCheck)]="movie"></loading-screen>

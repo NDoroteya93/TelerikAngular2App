@@ -1,0 +1,68 @@
+<div id="dvMap">
+    <div class="map-header">
+        <h3>{{pageTitle | uppercase}}</h3>  
+    </div>
+    <div class="map-container">
+        <div class="input-group add-on">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" [(ngModel)]="address" (setAddress)="getAddress($event)" googleplace/>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+
+        <div id="legend">
+            <h3>Legend</h3>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="http://iconshow.me/media/images/Application/Map-Markers-icons/png/32/MapMarker_PushPin1_Right_Pink.png" alt="wish-place">
+                </div>
+                <div class="col-sm-8">Visited place</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="http://wfarm1.dataknet.com/static/resources/icons/set1/a947bd4c1230.png" alt="visited-place">
+                </div>
+                <div class="col-sm-8">Wished place</div>
+
+            </div>
+        </div>
+
+        <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
+
+            <sebm-google-map-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i, m.id, m.lat, m.lng)" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable" [iconUrl]="m.isVisited  ? 'http://iconshow.me/media/images/Application/Map-Markers-icons/png/32/MapMarker_PushPin1_Right_Pink.png' : 'http://wfarm1.dataknet.com/static/resources/icons/set1/a947bd4c1230.png'"
+                (dragEnd)="markerDragEnd(m, $event)">
+
+                <sebm-google-map-info-window [isOpen]="m.isOpen" (closeClick)="close()">
+                    <div *ngIf="!isEditMode">
+                        <div class="header-box">
+                            {{m.label}}
+                        </div>
+                        <div class="description-box">
+                            {{m.description}}
+                        </div>
+                        <button type="button" class="btn btn-default info-window-btn" *ngIf="userIsAuthorized" (click)="editPlace()"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                    </div>
+                    <div *ngIf="userIsAuthorized">
+                        <div *ngIf="isEditMode">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" [ngModel]="m.label" (ngModelChange)="m.label = $event">
+                            </div>
+                            <div class="form-group">
+                                <label for="Description">Description</label>
+                                <input type="text" class="form-control" id="description" [ngModel]="m.description" (ngModelChange)="m.description = $event">
+                            </div>
+                            <input type="checkbox" [(ngModel)]="m.isVisited" (change)="m.isVisited" value="Want to visit" /> Want to visit
+                            <div class="upload-picture" [dropzone]="DROPZONE_CONFIG" (error)="onUploadError($event)" (success)="onUploadSuccess(i)"></div>
+                            <button class="btn btn-default info-window-btn" [hidden]="!m.isSaved" (click)="updateUserPlace(i)"><span class="glyphicon glyphicon-refresh"></span> Update</button>
+                            <button class="btn btn-default info-window-btn" [hidden]="m.isSaved" (click)="savePlace(i)"><span class="glyphicon glyphicon-saved"></span> Save</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-default remove-btn info-window-btn" (click)="removePlace(m.id, i)"><span class="glyphicon glyphicon-trash"></span> Remove</button>
+                </sebm-google-map-info-window>
+
+            </sebm-google-map-marker>
+        </sebm-google-map>
+        <image-viwer [images]="images"></image-viwer>
+    </div>
+</div>

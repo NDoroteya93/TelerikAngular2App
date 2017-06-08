@@ -1,0 +1,17 @@
+<h1>Movies Top 10</h1>
+<div class="search-results">
+    <div>
+        <ul class="listContent">
+            <li class="mvlist" *ngFor="let movie of movies">
+                <img [routerLink]="['/movie-detail', movie.idIMDB]" class="imgPoster" [src]="movie.urlPoster" />
+                <div class="dvDescription">
+                    <a class="mvTitle" [routerLink]="['/movie-detail', movie.idIMDB]">{{movie.title}}</a>
+                    <span class="mvContent">{{ movie.plot }}</span>
+                    <p>Year: {{ movie.year }}</p>
+                    <p>Rating: {{ movie.rating }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<loading-screen [(objectToCheck)]="movies"></loading-screen>

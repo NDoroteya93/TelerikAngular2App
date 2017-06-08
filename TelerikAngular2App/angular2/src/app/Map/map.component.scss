@@ -1,0 +1,145 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.css');
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+:host h1 {
+    font-weight: 700;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+#dvMap {
+    overflow: hidden;
+    width: 80%;
+    margin-left: 15%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 7px;
+    position: relative;
+    margin-bottom: 24px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+#dvMap .map-header {
+    color: #ffffff;
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 22px;
+    padding: 4px 22px;
+    background-color: transparent;
+}
+
+#dvMap .map-header h3 {
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 0.9;
+    color: #ffffff;
+    text-align: left;
+}
+
+#dvMap .map-container {
+    width: 100%;
+    height: 80vh;
+    padding: 0px 22px 25px;
+}
+
+#dvMap .map-container .input-group {
+    width: 20%;
+    top: 50px;
+    left: 24px;
+}
+
+.add-on .input-group-btn>.btn {
+    border-left-width: 0;
+    left: -2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.add-on .form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #cccccc;
+}
+
+.sebm-google-map-container {
+    width: 100%;
+    height: 95%;
+}
+
+.upload-picture {
+    margin: 5px;
+    padding: 5px;
+    background-color: #e7eaef;
+    color: #607582;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.upload-picture::before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e198";
+    font-size: 3em;
+    color: #a5b6c4;
+}
+
+.dropzone .dz-preview .dz-progress {
+    left: 30% !important;
+    top: 120% !important;
+    width: 130px !important;
+}
+
+button.info-window-btn {
+    float: left;
+    margin: 5px;
+}
+
+// Info Box
+.header-box {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 2px solid #cccccc;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.description-box {
+    margin-bottom: 10px;
+}
+
+// Legend
+#legend {
+    position: absolute !important;
+    bottom: 15%;
+    right: 10px;
+    left: auto;
+    width: 10%;
+    height: auto;
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid #ccc;
+    z-index: 3;
+}
+
+#legend h3 {
+    margin-top: 0;
+}
+
+#legend div {
+    vertical-align: middle;
+}
+
+#legend div.row {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1220px) {
+    #legend {
+        width: 20%;
+    }
+}

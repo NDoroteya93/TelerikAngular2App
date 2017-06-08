@@ -1,0 +1,40 @@
+<div class="nav-side-menu">
+    <div class="brand">My Trips
+        <a class="btn" (click)='toggleMenu()'><span class="glyphicon glyphicon-menu-hamburger"></span> </a>
+    </div>
+
+    <div class="menu-icons">
+        <ul>
+            <li [routerLink]="['']">
+                <a>
+                    <i class="fa fa-dashboard fa-lg"></i>
+                </a>
+            </li>
+
+            <li [style.height]="hideVisited?'':'113px'" *ngIf="userIsAuthorized" [routerLink]="['visit-place']"> <a><i class="fa fa-globe fa-lg"></i></a> </li>
+            <li [style.height]="hideWish?'':'113px'" *ngIf="userIsAuthorized" [routerLink]="['wish-list']">
+                <a><i class="fa fa-gift fa-lg"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <div [@slideInOut]="menuState" class="menu-list">
+
+        <ul id="menu-content" class="menu-content collapse out">
+            <li [routerLink]="['']"><a>Dashboard</a></li>
+
+            <li *ngIf="userIsAuthorized" (click)="toggleVisited()">
+                <a>Visited Places <span class="glyphicon glyphicon-menu-down"></span></a>
+                <ul class="sub-menu" [hidden]="hideVisited">
+                    <li [routerLink]="['visit-place']">Visited plave - tables</li>
+                    <li [routerLink]="['bar-chart']">Visited place - chart</li>
+                </ul>
+            </li>
+
+            <li *ngIf="userIsAuthorized" [routerLink]="['wish-list']">
+                <a> Wish List</a>
+            </li>
+
+        </ul>
+    </div>
+</div>
